@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.6.0" client="site" method="upgrade">
+    <!-- Name of the Module -->
+        <name>Insert Article</name> 
+    <!-- Name of the Author -->
+        <author>Cristian Grañó</author> 
+    <!-- Version Date of the Module -->
+        <creationDate>18-ene-2011</creationDate> 
+    <!-- Copyright information -->
+        <copyright>All rights reserved by www.percha.com</copyright> 
+    <!-- License Information -->
+        <license>GPL 2.0</license> 
+    <!-- Author's email address -->
+        <authorEmail>cristian@percha.com</authorEmail> 
+    <!-- Author's website -->
+        <authorUrl>www.percha.com</authorUrl> 
+    <!-- Module version number -->
+        <version>1.6</version>
+    <!-- Description of what the module does -->
+        <description>Displays article as module
+	<![CDATA[ 
+		Displays article as module- thanks a lot to contributor: Oussama Chammam (ou_cha@hotmail.com) and to J. Cernek 
+	]]>
+	</description>
+    <!-- Listing of all files that should be installed for the module to function -->
+        <files>
+        <!-- The "module" attribute signifies that this is the main controller file -->
+                <filename module="mod_insertarticle">mod_insertarticle.php</filename>
+                <filename>index.html</filename>
+                <filename>helper.php</filename> 
+                <filename>tmpl/default.php</filename>
+                <filename>tmpl/index.html</filename>
+		<folder>img</folder>
+		<folder>fields</folder>
+        </files>
+   <!-- Languages --> 
+ 	<languages>
+		<language tag="en-GB">en-GB.mod_insertarticle.ini</language> 
+		<language tag="es-ES">es-ES.mod_insertarticle.ini</language> 
+	</languages> 
+  
+    <!-- Optional parameters --> 
+	<config>
+		<fields name="params" addfieldpath="/modules/mod_insertarticle/fields">
+			<fieldset name="basic">
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="CLASS" />
+ 
+				<field
+					name="id"
+					type="Articles"
+					label="ARTICLE ID" />
+
+				<field
+					name="showtitle_article"
+					type="radio"
+					default="0"
+                                        required="true"
+					label="SHOW_ARTICLE" >
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+
+				<field
+					name="only_article_view"
+					type="radio"
+					default="0"
+					label="HIDE_CONTAINER" >
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+ 
+				<field
+					name="read_more"
+					type="radio"
+					default="0"
+					label="SHOW_README" >
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+
+				<field
+					name="txt_read_more"
+					type="radio"
+					default="1"
+					label="TEXT_README" >
+					<option
+						value="1">Readmore</option>
+					<option
+						value="0">TITLE</option>
+				</field>
+                                
+                                <field
+					name="show_edit"
+					type="radio"
+					default="0"
+					label="SHOW_EDIT" >
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+
+                                <field
+					name="info"
+					type="Info"
+					label="INFO" />
+			</fieldset>
+ 			<fieldset name="advanced">
+				<field name="layout" type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field name="item_heading" type="list" default="2"
+					label="HEADING"
+				>
+					<option value="1">JH1</option>
+					<option value="2">JH2</option>
+					<option value="3">JH3</option>
+					<option value="4">JH4</option>
+					<option value="5">JH5</option>
+				</field> 
+                                
+                                <field
+					name="Itemid"
+					type="text"
+					label="Itemid MENU" />
+
+                    </fieldset>
+		</fields>
+	</config> 
+</extension>
