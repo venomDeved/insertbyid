@@ -12,7 +12,18 @@
 <?php defined('_JEXEC') or die('Restricted access'); // no direct access ?> 
 
 <?php if(!empty($moduleclass_sfx)){?><div class="<?php echo $moduleclass_sfx; ?>"><?php } ?>
-<?php if($showtitle_article == 1) { ?><h<?php echo $params->get('item_heading', 1);?>><?php echo $item->title ; ?></h<?php echo $params->get('item_heading', 1);?>><?php } ?>
+<?php if($showtitle_article == 1) { ?>
+	<h<?php echo $params->get('item_heading', 1);?>>
+	<?php if ($params->get('title_article_linkable')) { ?>
+		<a href="<?php 
+			$url = JRoute::_(ContentHelperRoute::getArticleRoute($item->id,$item->catid));
+			echo $url; ?>">
+		<?php echo $item->title; ?></a>
+	<?php } else { ?>
+		<?php echo $item->title; ?>
+	<?php } ?>
+	</h<?php echo $params->get('item_heading', 1);?>>
+<?php } ?>
 <?php echo JHTML::_('content.prepare', $item->introtext); ?>
 <?php   if ($read_more == 1){ ?>
  <a class='readmore' href='<?php echo $url; ?>'>
