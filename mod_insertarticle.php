@@ -16,6 +16,8 @@ defined('DS')?  null :define('DS',DIRECTORY_SEPARATOR);
 require_once(dirname(__FILE__).DS.'helper.php'); 
 
 jimport( 'joomla.html.parameter' );
+jimport( 'joomla.html.registry' );
+jimport( 'joomla.version' );
 
 // get a parameter from the module's configuration
 
@@ -50,12 +52,26 @@ if (!$ArticleView){
 
         if($txt_read_more==0) $readMoreTXT=$item->title;
 
-        JFactory::getApplication();
+        $app = JFactory::getApplication();
         $parametar         = $app->getParams();
 
 
 
-        $parametar = new JParameter($item->attribs); 
+        //
+        
+        $ver = new JVersion();
+        $vernum = $ver->getShortVersion();
+        
+        $pos = strrpos($vernum, "3.");
+        if ($pos === false) { // note: three equal signs
+            // not found...
+            $parametar = new JParameter($item->attribs); 
+        }else{
+            
+            $parametar = new JRegistry($item->attribs);
+        }
+
+        
 
 
         $user =& JFactory::getUser( );   

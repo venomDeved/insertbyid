@@ -5,7 +5,7 @@
     <!-- Name of the Author -->
         <author>Cristian Grañó</author> 
     <!-- Version Date of the Module -->
-        <creationDate>18-ene-2011</creationDate> 
+        <creationDate>February 2013</creationDate> 
     <!-- Copyright information -->
         <copyright>All rights reserved by www.percha.com</copyright> 
     <!-- License Information -->
@@ -15,7 +15,7 @@
     <!-- Author's website -->
         <authorUrl>www.percha.com</authorUrl> 
     <!-- Module version number -->
-        <version>1.6</version>
+        <version>1.8</version>
     <!-- Description of what the module does -->
         <description>Displays article as module
 	<![CDATA[ 
@@ -37,6 +37,7 @@
  	<languages>
 		<language tag="en-GB">en-GB.mod_insertarticle.ini</language> 
 		<language tag="es-ES">es-ES.mod_insertarticle.ini</language> 
+		<language tag="fr-FR">fr-FR.mod_insertarticle.ini</language> 
 	</languages> 
   
     <!-- Optional parameters --> 
@@ -59,6 +60,18 @@
 					default="0"
                                         required="true"
 					label="SHOW_ARTICLE" >
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+
+				<field
+					name="title_article_linkable"
+					type="radio"
+					default="0"
+                                        required="true"
+					label="ARTICLE_TITLE_LINKABLE" >
 					<option
 						value="1">JYES</option>
 					<option
