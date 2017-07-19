@@ -5,7 +5,7 @@
     <!-- Name of the Author -->
         <author>Cristian Grañó</author> 
     <!-- Version Date of the Module -->
-        <creationDate>February 2013</creationDate> 
+        <creationDate>July 2017</creationDate>
     <!-- Copyright information -->
         <copyright>All rights reserved by www.percha.com</copyright> 
     <!-- License Information -->
@@ -15,7 +15,7 @@
     <!-- Author's website -->
         <authorUrl>www.percha.com</authorUrl> 
     <!-- Module version number -->
-        <version>1.8</version>
+        <version>1.8.1</version>
     <!-- Description of what the module does -->
         <description>Displays article as module
 	<![CDATA[ 
