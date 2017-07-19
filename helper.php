@@ -13,8 +13,8 @@ defined('_JEXEC') or die('Direct Access to this location is not allowed.');
  
 class ModInsertarticle {
     
-	public function getArticles($args){
-		$db = &JFactory::getDBO();
+	static function getArticles($args){
+		$db = JFactory::getDBO();
 		$item = "";
 
 		$id = $args['id'];
