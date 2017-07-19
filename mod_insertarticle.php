@@ -35,7 +35,7 @@ if (!$ArticleView){
 	$item = ModInsertarticle::getArticles($args);
         //*************
         
-        $config=&JFactory::getConfig(); 
+        $config = JFactory::getConfig(); 
 
 
         $Itemid= $params->get('Itemid','');
@@ -74,7 +74,7 @@ if (!$ArticleView){
         
 
 
-        $user =& JFactory::getUser( );   
+        $user = JFactory::getUser( );
         $url ="";
         
         //***********
